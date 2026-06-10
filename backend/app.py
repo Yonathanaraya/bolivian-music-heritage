@@ -15,5 +15,14 @@ def home():
     conn.close()
     return render_template('index.html', music_list=music_list)
 
+@app.route('/browse')
+def browse():
+    conn = get_db()
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM music')
+    music_list = cursor.fetchall()
+    conn.close()
+    return render_template('browse.html', music_list=music_list)
+
 if __name__ == '__main__':
     app.run(debug=True)

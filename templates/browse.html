@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolivian Music Heritage</title>
+    <title>Browse Music - Bolivian Music Heritage</title>
     <link rel="stylesheet" href="../static/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -13,26 +13,23 @@
         <h1>Bolivian Music Heritage</h1>
         <p>Preserving and sharing Bolivia's rich musical traditions</p>
         <nav>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
             <a href="/browse">Browse Music</a>
             <a href="#">Videos</a>
             <a href="#">About</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Welcome to the Archive</h2>
-            <p>Explore a digital collection of Bolivian musical performances, recordings, and audiovisual materials.</p>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search by title, artist, or genre...">
-                <button onclick="searchMusic()">Search</button>
-            </div>
+    <section class="browse-hero">
+        <h2>Browse the Collection</h2>
+        <p>Explore our full archive of Bolivian music</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by title, artist, or genre...">
+            <button onclick="searchMusic()">Search</button>
         </div>
     </section>
 
-    <section class="featured">
-        <h2>Featured Collections</h2>
+    <section class="browse-section">
         <div class="cards" id="musicCards">
             {% for song in music_list %}
             <div class="card">
